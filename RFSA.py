@@ -140,8 +140,10 @@ if __name__ == "__main__":
     ax.set_xticks(range(12))
     ax.set_xticklabels(['J','F','M','A','M','J','J','A','S','O','N','D'])
 
+    ax.set_ylabel('mm/month')
+
     aximp = ax.twinx()
-    plot_importances(aximp,range(12),imp,impstd,['tair','VPD','sw'],pl.cm.jet(np.linspace(0,1,imp.shape[1])),'importances',legend_loc='upper center')
+    plot_importances(aximp,range(12),imp,impstd,['LAI','tair','VPD','sw','ppt'],pl.cm.jet(np.linspace(0,1,imp.shape[1])),'importance',legend_loc='upper center')
 
     fig.show()
 
