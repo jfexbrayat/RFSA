@@ -127,7 +127,7 @@ if __name__ == "__main__":
     df = pd.read_csv('TAM05_daily.csv')
     df.index = pd.date_range('2009-01-01','2010-12-31')
 
-    imp, impstd = RFSA(df,['LAI','tair','VPD','sw'],'GPP',resample='D',bins='M',n_jobs = 10)
+    imp, impstd = RFSA(df,['LAI','tair','VPD','sw','ppt'],'GPP',resample='D',bins='M',n_jobs = 10)
 
     #plotting part
 
