@@ -54,8 +54,8 @@ def RFSA(df,independent,dependent,resample='none',bins='single',n_jobs=1):
 
     # resample if needed
     if resample != 'none':
-        df = df.resample(resample)
-
+        df = df.resample(resample).mean()
+    
     #create the forest object
     forest = RandomForestRegressor(1000, bootstrap = True, oob_score = True, n_jobs = n_jobs, criterion='mse')
 
